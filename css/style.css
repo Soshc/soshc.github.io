@@ -113,9 +113,27 @@ h2 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 600; line-height: 1.15; }
 .points li { padding-left: 30px; position: relative; }
 .points li::before { content: ""; position: absolute; left: 0; top: 6px; width: 14px; height: 18px; border: 1.5px solid var(--green); border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; border-top-left-radius: 0; transform: rotate(45deg); box-shadow: 0 0 10px rgba(77,255,149,.5); }
 .points b { color: var(--text); font-weight: 600; }
-.steam-link { display: inline-block; margin-top: 32px; opacity: .9; transition: opacity .2s, transform .2s; }
-.steam-link:hover { opacity: 1; transform: translateY(-2px); }
-.steam-link img { width: 190px; }
+.btn-steam {
+  position: relative; overflow: hidden; margin-top: 34px;
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 12px 22px 12px 14px; border-radius: 12px;
+  background: linear-gradient(100deg, #06bfff, #2d73ff);
+  color: #fff; box-shadow: 0 8px 30px rgba(26, 159, 255, .35), inset 0 1px 0 rgba(255,255,255,.25);
+  transition: transform .2s, box-shadow .2s;
+}
+.btn-steam::after {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+  animation: shine 3.2s ease-in-out infinite;
+}
+@keyframes shine { 0%, 55% { left: -60% } 100% { left: 130% } }
+.btn-steam:hover { transform: translateY(-3px); box-shadow: 0 14px 44px rgba(26, 159, 255, .55), inset 0 1px 0 rgba(255,255,255,.3); }
+.btn-steam img { width: 42px; height: 42px; }
+.btn-steam span { display: flex; flex-direction: column; line-height: 1.1; }
+.btn-steam small { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .9; }
+.btn-steam b { font-size: 22px; letter-spacing: .08em; }
+.btn-steam i { font-style: normal; font-size: 22px; margin-left: 6px; transition: transform .2s; }
+.btn-steam:hover i { transform: translateX(4px); }
 .teaser video { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(0,0,0,.6); }
 .caption { color: var(--muted); font-size: 13px; margin-top: 10px; }
 
@@ -208,7 +226,7 @@ h2 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 600; line-height: 1.15; }
 .reveal.in { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-bg, .grain, .hero h1 { animation: none; }
+  .hero-bg, .grain, .hero h1, .btn-steam::after { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
