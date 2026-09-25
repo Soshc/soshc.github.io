@@ -207,6 +207,8 @@ h2 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 600; line-height: 1.15; }
 .socials { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
 .socials a { border: 1px solid var(--line); padding: 9px 20px; border-radius: 99px; font-size: 14px; transition: border-color .2s, color .2s; }
 .socials a:hover { border-color: var(--green); color: var(--green); }
+.socials .support { color: #ff8fa3; border-color: rgba(255, 143, 163, .35); }
+.socials .support:hover { color: #ffb3c1; border-color: #ff8fa3; box-shadow: 0 0 18px rgba(255, 143, 163, .25); }
 .footer { text-align: center; color: #5d5b58; font-size: 13px; padding: 30px 0 40px; border-top: 1px solid var(--line); max-width: var(--max); margin: 0 auto; }
 
 /* ---------- modal ---------- */
