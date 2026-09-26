@@ -53,6 +53,14 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .nav-links a { opacity: .78; transition: opacity .2s, color .2s; }
 .nav-links a:hover { opacity: 1; color: var(--green); }
 .nav-cta { border: 1px solid var(--green-dim); padding: 7px 16px; border-radius: 99px; opacity: 1 !important; }
+.nav-right { display: flex; align-items: center; gap: 22px; }
+.lang-toggle {
+  position: relative; z-index: 2;
+  font: 500 13px/1 "IBM Plex Sans Arabic", "Montserrat", sans-serif;
+  padding: 8px 14px; border-radius: 99px; border: 1px solid rgba(255,255,255,.22);
+  color: var(--text); transition: border-color .2s, color .2s, background .2s;
+}
+.lang-toggle:hover { border-color: var(--green); color: var(--green); background: rgba(77,255,149,.06); }
 .nav-toggle { display: none; width: 34px; height: 34px; position: relative; }
 .nav-toggle span { position: absolute; left: 6px; right: 6px; height: 2px; background: var(--text); transition: transform .3s; }
 .nav-toggle span:first-child { top: 12px; } .nav-toggle span:last-child { top: 20px; }
@@ -263,4 +271,35 @@ h2 { font-size: clamp(28px, 3.6vw, 44px); font-weight: 600; line-height: 1.15; }
 @media (max-width: 420px) {
   .stats { grid-template-columns: 1fr 1fr; gap: 18px; }
   .stat { padding-left: 14px; }
+}
+@media (max-width: 760px) {
+  .nav-right { gap: 10px; }
+  .lang-toggle { padding: 7px 11px; font-size: 12px; }
+}
+
+/* ---------- Arabic / right-to-left ---------- */
+[dir="rtl"] body { font-family: "IBM Plex Sans Arabic", "Montserrat", system-ui, sans-serif; line-height: 1.85; }
+/* Arabic letters must join: no letter-spacing on Arabic text */
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] .hero-role, [dir="rtl"] .tagline,
+[dir="rtl"] .badge, [dir="rtl"] .btn-steam small, [dir="rtl"] .meta span { letter-spacing: 0; }
+[dir="rtl"] .hero h1 { font-weight: 700; line-height: 1.25; }
+[dir="rtl"] .brand, [dir="rtl"] .eyebrow, [dir="rtl"] .mail, [dir="rtl"] .footer, [dir="rtl"] .stat strong { font-family: "Montserrat", sans-serif; }
+[dir="rtl"] .footer { font-family: "IBM Plex Sans Arabic", "Montserrat", sans-serif; }
+[dir="rtl"] .btn-steam b { font-family: "Montserrat", sans-serif; }
+[dir="rtl"] .stat { border-left: 0; border-right: 1px solid var(--line); padding-left: 0; padding-right: 22px; }
+[dir="rtl"] .points li { padding-left: 0; padding-right: 30px; }
+[dir="rtl"] .points li::before { left: auto; right: 0; }
+[dir="rtl"] .btn-steam { padding: 12px 14px 12px 22px; }
+[dir="rtl"] .btn-steam i { margin-left: 0; margin-right: 6px; transform: scaleX(-1); }
+[dir="rtl"] .btn-steam:hover i { transform: scaleX(-1) translateX(4px); }
+[dir="rtl"] .meta em { margin-right: 0; margin-left: 6px; }
+[dir="rtl"] .tag { left: auto; right: 10px; }
+[dir="rtl"] .modal-close { right: auto; left: 18px; }
+[dir="rtl"] .collab small, [dir="rtl"] .caption, [dir="rtl"] .sub-note { font-size: 14px; }
+@media (max-width: 760px) {
+  [dir="rtl"] .nav-links { right: auto; left: 0; transform: translateX(-100%); align-items: flex-start; }
+  [dir="rtl"] .nav.open .nav-links { transform: none; }
+}
+@media (max-width: 420px) {
+  [dir="rtl"] .stat { padding-left: 0; padding-right: 14px; }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
   <link rel="icon" href="img/logo_house.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,14 +21,17 @@
 
   <header class="nav" id="top">
     <a class="brand" href="#top">MadeBy<span>Soshi</span></a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav-links">
-      <a href="#janob">Janob Station</a>
-      <a href="#house">The House Wants More</a>
-      <a href="#environment">Environment Art</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact" class="nav-cta">Contact</a>
-    </nav>
+    <div class="nav-right">
+      <nav class="nav-links">
+        <a href="#janob" data-i18n="nav_janob">Janob Station</a>
+        <a href="#house">The House Wants More</a>
+        <a href="#environment" data-i18n="nav_env">Environment Art</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#contact" class="nav-cta" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <button class="lang-toggle" type="button" aria-label="Switch language"><span class="lang-label">العربية</span></button>
+      <button class="nav-toggle" aria-label="Menu" data-i18n-aria="aria_menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
   </header>
 
   <!-- HERO -->
@@ -37,21 +40,21 @@
     <div class="hero-shade"></div>
     <div class="hero-content">
       <p class="eyebrow">MadeBySoshi</p>
-      <h1>Yaser Al-Olqi</h1>
-      <p class="hero-role">Solo Game Developer &amp; 3D Artist</p>
+      <h1 data-i18n="hero_name">Yaser Al-Olqi</h1>
+      <p class="hero-role" data-i18n="hero_role">Solo Game Developer &amp; 3D Artist</p>
       <div class="hero-actions">
-        <button class="btn btn-green" data-video="video/janob_station_teaser.mp4">&#9654;&ensp;Watch the Teaser</button>
-        <a class="btn btn-ghost" href="#janob">View Work</a>
+        <button class="btn btn-green" data-video="video/janob_station_teaser.mp4" data-i18n="hero_teaser">&#9654;&ensp;Watch the Teaser</button>
+        <a class="btn btn-ghost" href="#janob" data-i18n="hero_work">View Work</a>
       </div>
     </div>
-    <a class="scroll-hint" href="#stats" aria-label="Scroll down"></a>
+    <a class="scroll-hint" href="#stats" aria-label="Scroll down" data-i18n-aria="aria_scroll"></a>
   </section>
 
   <!-- STATS -->
   <section class="stats" id="stats">
-    <div class="stat reveal"><strong data-count="2800">2,800</strong><span>+</span><p>Steam wishlists before the official trailer</p></div>
-    <div class="stat reveal"><strong data-count="2" data-suffix="M">2M</strong><span>+</span><p>Views</p></div>
-    <div class="stat reveal"><strong>2</strong><p>Games in development</p></div>
+    <div class="stat reveal"><strong data-count="2800">2,800</strong><span>+</span><p data-i18n="stat_wish">Steam wishlists before the official trailer</p></div>
+    <div class="stat reveal"><strong data-count="2" data-suffix="M">2M</strong><span>+</span><p data-i18n="stat_views">Views</p></div>
+    <div class="stat reveal"><strong>2</strong><p data-i18n="stat_games">Games in development</p></div>
     <div class="stat reveal"><strong>UE&nbsp;5.8</strong><p>Lumen · Nanite · MetaHuman</p></div>
   </section>
 
@@ -59,21 +62,21 @@
   <section class="project janob" id="janob">
     <div class="project-head reveal">
       <img class="project-logo" src="img/logo_janob.webp" alt="Janob Station — محطة الجنوب" width="1227" height="558">
-      <p class="tagline">Psychological Horror&ensp;|&ensp;Cultural Realism</p>
+      <p class="tagline" data-i18n="janob_tagline">Psychological Horror&ensp;|&ensp;Cultural Realism</p>
     </div>
 
     <div class="overview">
       <div class="overview-text reveal">
-        <h2>Game Overview &amp; Concept</h2>
-        <p class="lead"><span class="accent-red">Jan</span>ob Station: a solo-developed psychological horror game.</p>
+        <h2 data-i18n="janob_h2">Game Overview &amp; Concept</h2>
+        <p class="lead" data-i18n="janob_lead"><span class="accent-red">Jan</span>ob Station: a solo-developed psychological horror game.</p>
         <ul class="points">
-          <li><b>The Premise</b> — A night-shift worker at a remote Saudi highway station and tea shop faces a chilling mystery.</li>
-          <li><b>Cultural Realism</b> — Meticulously detailed local architecture and authentic Saudi cultural settings.</li>
-          <li><b>Dynamic Cast</b> — Full Arabic voice acting with intense psychological horror and prominent community cameos.</li>
+          <li data-i18n="janob_p1"><b>The Premise</b> — A night-shift worker at a remote Saudi highway station and tea shop faces a chilling mystery.</li>
+          <li data-i18n="janob_p2"><b>Cultural Realism</b> — Meticulously detailed local architecture and authentic Saudi cultural settings.</li>
+          <li data-i18n="janob_p3"><b>Dynamic Cast</b> — Full Arabic voice acting with intense psychological horror and prominent community cameos.</li>
         </ul>
         <a class="btn-steam" href="https://store.steampowered.com/app/4832680/Janob_Station" target="_blank" rel="noopener">
           <img src="img/steam_icon.webp" alt="" width="126" height="127">
-          <span><small>Wishlist now on</small><b>STEAM</b></span>
+          <span><small data-i18n="steam_small">Wishlist now on</small><b>STEAM</b></span>
           <i aria-hidden="true">&rarr;</i>
         </a>
       </div>
@@ -81,54 +84,54 @@
         <video controls preload="none" playsinline poster="img/janob_teaser_poster.webp">
           <source src="video/janob_station_teaser.mp4" type="video/mp4">
         </video>
-        <p class="caption">Official Teaser — launched August 20, 2026 · available on the Steam store page</p>
+        <p class="caption" data-i18n="teaser_caption">Official Teaser — launched August 20, 2026 · available on the Steam store page</p>
       </div>
     </div>
 
-    <h3 class="sub reveal">In-Game Captures</h3>
-    <p class="sub-note reveal">Real-time Unreal Engine 5.8 — Lumen for cinematic lighting, Nanite for high-fidelity architectural detail.</p>
+    <h3 class="sub reveal" data-i18n="captures">In-Game Captures</h3>
+    <p class="sub-note reveal" data-i18n="captures_note">Real-time Unreal Engine 5.8 — Lumen for cinematic lighting, Nanite for high-fidelity architectural detail.</p>
     <div class="gallery g-janob">
-      <figure class="wide reveal"><img loading="lazy" src="img/janob_01_station.webp" alt="Janob Station — the station at night under its neon sign"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/janob_02_dumpster.webp" alt="Janob Station — dumpster corner"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/janob_03_storage.webp" alt="Janob Station — storage room"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/janob_04_wall.webp" alt="Janob Station — street wall at night"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/janob_05_alley.webp" alt="Janob Station — alley"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/janob_06_street.webp" alt="Janob Station — night street"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/janob_07_greenroom.webp" alt="Janob Station — green room"></figure>
-      <figure class="wide reveal"><img loading="lazy" src="img/janob_08_counter.webp" alt="Janob Station — shop counter"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/janob_09_room.webp" alt="Janob Station — interior"></figure>
+      <figure class="wide reveal"><img loading="lazy" src="img/janob_01_station.webp" alt="Janob Station — the station at night under its neon sign" data-i18n-alt="alt_j1"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/janob_02_dumpster.webp" alt="Janob Station — dumpster corner" data-i18n-alt="alt_j2"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/janob_03_storage.webp" alt="Janob Station — storage room" data-i18n-alt="alt_j3"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/janob_04_wall.webp" alt="Janob Station — street wall at night" data-i18n-alt="alt_j4"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/janob_05_alley.webp" alt="Janob Station — alley" data-i18n-alt="alt_j5"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/janob_06_street.webp" alt="Janob Station — night street" data-i18n-alt="alt_j6"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/janob_07_greenroom.webp" alt="Janob Station — green room" data-i18n-alt="alt_j7"></figure>
+      <figure class="wide reveal"><img loading="lazy" src="img/janob_08_counter.webp" alt="Janob Station — shop counter" data-i18n-alt="alt_j8"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/janob_09_room.webp" alt="Janob Station — interior" data-i18n-alt="alt_j9"></figure>
     </div>
 
-    <h3 class="sub reveal">3D Modeling &amp; Texturing</h3>
+    <h3 class="sub reveal" data-i18n="model_h3">3D Modeling &amp; Texturing</h3>
     <div class="split">
       <div class="split-text reveal">
-        <h4>Environment &amp; Architectural Design</h4>
-        <p>Modeling the core world structures — including the station, mosque, and shops — completely from scratch in Blender.</p>
-        <h4>Texturing &amp; UV Workflow</h4>
-        <p>Designing custom textures from scratch, re-texturing props to match an authentic Saudi environment and a horror theme, and creating optimized UV layouts.</p>
+        <h4 data-i18n="model_env_h">Environment &amp; Architectural Design</h4>
+        <p data-i18n="model_env_p">Modeling the core world structures — including the station, mosque, and shops — completely from scratch in Blender.</p>
+        <h4 data-i18n="model_tex_h">Texturing &amp; UV Workflow</h4>
+        <p data-i18n="model_tex_p">Designing custom textures from scratch, re-texturing props to match an authentic Saudi environment and a horror theme, and creating optimized UV layouts.</p>
       </div>
       <div class="gallery pairs">
-        <figure class="reveal"><img loading="lazy" src="img/janob_model_station_blockout.webp" alt="The station — Blender model"><span class="tag">Blender</span></figure>
-        <figure class="reveal"><img loading="lazy" src="img/janob_model_station_final.webp" alt="The station — final in Unreal"><span class="tag tag-green">Unreal</span></figure>
-        <figure class="reveal"><img loading="lazy" src="img/janob_model_building_blockout.webp" alt="Apartment building — Blender model"><span class="tag">Blender</span></figure>
-        <figure class="reveal"><img loading="lazy" src="img/janob_model_building_final.webp" alt="Apartment building — final in Unreal"><span class="tag tag-green">Unreal</span></figure>
+        <figure class="reveal"><img loading="lazy" src="img/janob_model_station_blockout.webp" alt="The station — Blender model" data-i18n-alt="alt_m1"><span class="tag">Blender</span></figure>
+        <figure class="reveal"><img loading="lazy" src="img/janob_model_station_final.webp" alt="The station — final in Unreal" data-i18n-alt="alt_m2"><span class="tag tag-green">Unreal</span></figure>
+        <figure class="reveal"><img loading="lazy" src="img/janob_model_building_blockout.webp" alt="Apartment building — Blender model" data-i18n-alt="alt_m3"><span class="tag">Blender</span></figure>
+        <figure class="reveal"><img loading="lazy" src="img/janob_model_building_final.webp" alt="Apartment building — final in Unreal" data-i18n-alt="alt_m4"><span class="tag tag-green">Unreal</span></figure>
       </div>
     </div>
 
-    <h3 class="sub reveal">Character Design &amp; Animation</h3>
+    <h3 class="sub reveal" data-i18n="chars_h3">Character Design &amp; Animation</h3>
     <div class="chars">
-      <figure class="reveal"><img loading="lazy" src="img/char_metahuman_cap.webp" alt="MetaHuman character in a cap"><figcaption>High-fidelity faces — detailed local characters built with MetaHuman Creator, FaceBuilder sculpting and hand-painted textures.</figcaption></figure>
-      <figure class="reveal duo"><div><img loading="lazy" src="img/char_abaya_1.webp" alt="Character in an abaya"><img loading="lazy" src="img/char_abaya_2.webp" alt="Character in an abaya, close"></div><figcaption>In-game characters with cloth and authentic local clothing.</figcaption></figure>
-      <figure class="reveal"><img loading="lazy" src="img/char_metahuman_glasses.webp" alt="MetaHuman character with glasses"><figcaption>UE 5.8 Live Link Hub — full-body &amp; facial motion capture for real-time character performances.</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="img/char_metahuman_cap.webp" alt="MetaHuman character in a cap" data-i18n-alt="alt_c1"><figcaption data-i18n="chars_c1">High-fidelity faces — detailed local characters built with MetaHuman Creator, FaceBuilder sculpting and hand-painted textures.</figcaption></figure>
+      <figure class="reveal duo"><div><img loading="lazy" src="img/char_abaya_1.webp" alt="Character in an abaya" data-i18n-alt="alt_c2"><img loading="lazy" src="img/char_abaya_2.webp" alt="Character in an abaya, close" data-i18n-alt="alt_c3"></div><figcaption data-i18n="chars_c2">In-game characters with cloth and authentic local clothing.</figcaption></figure>
+      <figure class="reveal"><img loading="lazy" src="img/char_metahuman_glasses.webp" alt="MetaHuman character with glasses" data-i18n-alt="alt_c4"><figcaption data-i18n="chars_c3">UE 5.8 Live Link Hub — full-body &amp; facial motion capture for real-time character performances.</figcaption></figure>
     </div>
 
-    <h3 class="sub reveal">Community &amp; Collaborations</h3>
+    <h3 class="sub reveal" data-i18n="collab_h3">Community &amp; Collaborations</h3>
     <div class="collabs">
       <div class="collab reveal"><img loading="lazy" src="img/collab_mlzlz.webp" alt="Mlzlz"><b>Mlzlz</b></div>
-      <div class="collab reveal"><img loading="lazy" src="img/collab_drth.webp" alt="DRTH"><b>DRTH</b><small>Developer of Aunt Fatima</small></div>
+      <div class="collab reveal"><img loading="lazy" src="img/collab_drth.webp" alt="DRTH"><b>DRTH</b><small data-i18n="collab_drth">Developer of Aunt Fatima</small></div>
       <div class="collab reveal"><img loading="lazy" src="img/collab_hamad.webp" alt="Hamad Al7anoti"><b>Hamad Al7anoti</b></div>
     </div>
-    <p class="sub-note center reveal">Secured upcoming voice-acting and special cameos from prominent community figures.</p>
+    <p class="sub-note center reveal" data-i18n="collab_note">Secured upcoming voice-acting and special cameos from prominent community figures.</p>
   </section>
 
   <!-- THE HOUSE WANTS MORE -->
@@ -136,16 +139,16 @@
     <div class="house-hero" style="background-image:url(img/house_bg.webp)">
       <div class="house-hero-inner reveal">
         <img class="house-logo" src="img/logo_house.webp" alt="The House Wants More" width="999" height="1004">
-        <p class="tagline cream">Online Co-op, Survival Horror</p>
-        <span class="badge">Upcoming Game</span>
+        <p class="tagline cream" data-i18n="house_tagline">Online Co-op, Survival Horror</p>
+        <span class="badge" data-i18n="house_badge">Upcoming Game</span>
       </div>
     </div>
-    <h3 class="sub reveal">In-Game Captures</h3>
+    <h3 class="sub reveal" data-i18n="captures">In-Game Captures</h3>
     <div class="gallery g-house">
-      <figure class="reveal"><img loading="lazy" src="img/house_01_bedroom.webp" alt="The House Wants More — bedroom"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/house_02_dining.webp" alt="The House Wants More — dining room"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/house_03_corridor.webp" alt="The House Wants More — corridor to the library"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/house_04_statue.webp" alt="The House Wants More — the great statue"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/house_01_bedroom.webp" alt="The House Wants More — bedroom" data-i18n-alt="alt_h1"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/house_02_dining.webp" alt="The House Wants More — dining room" data-i18n-alt="alt_h2"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/house_03_corridor.webp" alt="The House Wants More — corridor to the library" data-i18n-alt="alt_h3"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/house_04_statue.webp" alt="The House Wants More — the great statue" data-i18n-alt="alt_h4"></figure>
     </div>
   </section>
 
@@ -153,36 +156,36 @@
   <section class="project env" id="environment">
     <div class="env-hero" style="background-image:url(img/env_hero.webp)">
       <div class="env-hero-inner reveal">
-        <h2>Environment Art Concept &amp; Design</h2>
+        <h2 data-i18n="env_h2">Environment Art Concept &amp; Design</h2>
         <div class="meta">
-          <span><em>Role</em> Environment Artist / Level Designer</span>
-          <span><em>Tools</em> Unreal Engine 5.8 / Blender</span>
+          <span data-i18n="env_role"><em>Role</em> Environment Artist / Level Designer</span>
+          <span data-i18n="env_tools"><em>Tools</em> Unreal Engine 5.8 / Blender</span>
         </div>
       </div>
     </div>
-    <h3 class="sub reveal">In-Engine Captures</h3>
+    <h3 class="sub reveal" data-i18n="env_captures">In-Engine Captures</h3>
     <div class="gallery g-env">
-      <figure class="reveal"><img loading="lazy" src="img/env_01.webp" alt="Environment art — ruined gate under a storm"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/env_02.webp" alt="Environment art — the portal"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/env_03.webp" alt="Environment art — courtyard"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/env_04.webp" alt="Environment art — the gate at dusk"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/env_01.webp" alt="Environment art — ruined gate under a storm" data-i18n-alt="alt_e1"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/env_02.webp" alt="Environment art — the portal" data-i18n-alt="alt_e2"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/env_03.webp" alt="Environment art — courtyard" data-i18n-alt="alt_e3"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/env_04.webp" alt="Environment art — the gate at dusk" data-i18n-alt="alt_e4"></figure>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section class="skills" id="skills">
-    <h2 class="reveal">Tools &amp; Skills</h2>
+    <h2 class="reveal" data-i18n="skills_h2">Tools &amp; Skills</h2>
     <div class="skill-grid">
-      <div class="skill reveal"><h4>Unreal Engine 5.8</h4><p>Level design, Blueprints, Lumen lighting, Nanite, Sequencer cinematics, performance optimization.</p></div>
-      <div class="skill reveal"><h4>Blender</h4><p>Environment and architectural modeling from scratch, props, UV layouts.</p></div>
-      <div class="skill reveal"><h4>MetaHuman</h4><p>MetaHuman Creator, FaceBuilder, Live Link Hub full-body &amp; facial capture.</p></div>
-      <div class="skill reveal"><h4>Krita &amp; Canva</h4><p>Custom textures, signage and key art, marketing material.</p></div>
+      <div class="skill reveal"><h4>Unreal Engine 5.8</h4><p data-i18n="skill_ue">Level design, Blueprints, Lumen lighting, Nanite, Sequencer cinematics, performance optimization.</p></div>
+      <div class="skill reveal"><h4>Blender</h4><p data-i18n="skill_blender">Environment and architectural modeling from scratch, props, UV layouts.</p></div>
+      <div class="skill reveal"><h4>MetaHuman</h4><p data-i18n="skill_mh">MetaHuman Creator, FaceBuilder, Live Link Hub full-body &amp; facial capture.</p></div>
+      <div class="skill reveal"><h4>Krita &amp; Canva</h4><p data-i18n="skill_krita">Custom textures, signage and key art, marketing material.</p></div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <h2 class="reveal">Contact Me</h2>
+    <h2 class="reveal" data-i18n="contact_h2">Contact Me</h2>
     <div class="divider reveal"><i></i></div>
     <a class="mail reveal" href="mailto:Madebysoshi@gmail.com">Madebysoshi@gmail.com</a>
     <div class="socials reveal">
@@ -190,20 +193,21 @@
       <a href="https://www.instagram.com/madebysoshi" target="_blank" rel="noopener">Instagram</a>
       <a href="https://x.com/madebysoshi" target="_blank" rel="noopener">X</a>
       <a href="https://store.steampowered.com/app/4832680/Janob_Station" target="_blank" rel="noopener">Steam</a>
-      <a class="support" href="https://creators.sa/sosh1i" target="_blank" rel="noopener">&#9829;&ensp;Support my work</a>
+      <a class="support" href="https://creators.sa/sosh1i" target="_blank" rel="noopener" data-i18n="support">&#9829;&ensp;Support my work</a>
     </div>
   </section>
 
-  <footer class="footer">© 2026 Yaser Al-Olqi · MadeBySoshi</footer>
+  <footer class="footer" data-i18n="footer">© 2026 Yaser Al-Olqi · MadeBySoshi</footer>
 
   <!-- lightbox / video modal -->
   <div class="modal" hidden>
-    <button class="modal-close" aria-label="Close">&times;</button>
-    <button class="modal-prev" aria-label="Previous">&#8249;</button>
+    <button class="modal-close" aria-label="Close" data-i18n-aria="aria_close">&times;</button>
+    <button class="modal-prev" aria-label="Previous" data-i18n-aria="aria_prev">&#8249;</button>
     <div class="modal-body"></div>
-    <button class="modal-next" aria-label="Next">&#8250;</button>
+    <button class="modal-next" aria-label="Next" data-i18n-aria="aria_next">&#8250;</button>
   </div>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
