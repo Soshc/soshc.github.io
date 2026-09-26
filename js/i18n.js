@@ -2,8 +2,8 @@
 (() => {
   const AR = {
     // page
-    title: 'ياسر العلقي — معرض الأعمال',
-    description: 'ياسر العلقي (MadeBySoshi) — مطوّر ألعاب مستقل وفنان ثلاثي الأبعاد. محطة الجنوب، وThe House Wants More، وتصميم البيئات على Unreal Engine 5.8.',
+    title: 'ياسر العولقي — معرض الأعمال',
+    description: 'ياسر العولقي (MadeBySoshi) — مطوّر ألعاب مستقل وفنان ثلاثي الأبعاد. محطة الجنوب، وThe House Wants More، وتصميم البيئات على Unreal Engine 5.8.',
 
     // nav
     nav_janob: 'محطة الجنوب',
@@ -17,7 +17,7 @@
     aria_next: 'التالي',
 
     // hero
-    hero_name: 'ياسر العلقي',
+    hero_name: 'ياسر العولقي',
     hero_role: 'مطوّر ألعاب مستقل وفنان ثلاثي الأبعاد',
     hero_teaser: '&#9654;&ensp;شاهد العرض التشويقي',
     hero_work: 'استعرض أعمالي',
@@ -37,7 +37,7 @@
     steam_small: 'أضِفها إلى قائمة الرغبات على',
     teaser_caption: 'العرض التشويقي الرسمي — صدر في 20 أغسطس 2026 · متاح على صفحة اللعبة في <bdi>Steam</bdi>',
     captures: 'لقطات من داخل اللعبة',
-    captures_note: 'عرض لحظي على <bdi>Unreal Engine 5.8</bdi> — تقنية <bdi>Lumen</bdi> للإضاءة السينمائية، و<bdi>Nanite</bdi> لتفاصيل معمارية عالية الدقة.',
+    captures_note: 'لقطات لحظية من <bdi>Unreal Engine 5.8</bdi>، مع إضاءة سينمائية بتقنية <bdi>Lumen</bdi>.',
     model_h3: 'النمذجة ثلاثية الأبعاد والخامات',
     model_env_h: 'تصميم البيئة والعمارة',
     model_env_p: 'نمذجة المباني الأساسية في عالم اللعبة — ومنها المحطة والمسجد والمحلات — من الصفر بالكامل على <bdi>Blender</bdi>.',
@@ -63,7 +63,7 @@
 
     // skills
     skills_h2: 'الأدوات والمهارات',
-    skill_ue: 'تصميم المراحل، و<bdi>Blueprints</bdi>، وإضاءة <bdi>Lumen</bdi>، و<bdi>Nanite</bdi>، والمشاهد السينمائية عبر <bdi>Sequencer</bdi>، وتحسين الأداء.',
+    skill_ue: 'تصميم المراحل، و<bdi>Blueprints</bdi>، وإضاءة <bdi>Lumen</bdi>، والمشاهد السينمائية عبر <bdi>Sequencer</bdi>، وتحسين الأداء.',
     skill_blender: 'نمذجة البيئات والمباني من الصفر، والمجسّمات، وخرائط <bdi>UV</bdi>.',
     skill_mh: '<bdi>MetaHuman Creator</bdi> و<bdi>FaceBuilder</bdi>، والتقاط حركة الجسم والوجه عبر <bdi>Live Link Hub</bdi>.',
     skill_krita: 'تصميم الخامات واللافتات والصور الترويجية الرئيسية والمواد التسويقية.',
@@ -71,7 +71,7 @@
     // contact / footer
     contact_h2: 'تواصل معي',
     support: '&#9829;&ensp;ادعم أعمالي',
-    footer: '© 2026 ياسر العلقي · MadeBySoshi',
+    footer: '© 2026 ياسر العولقي · MadeBySoshi',
 
     // image descriptions (screen readers)
     alt_j1: 'محطة الجنوب — المحطة ليلًا تحت لافتة النيون',
