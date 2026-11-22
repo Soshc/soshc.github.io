@@ -3,7 +3,7 @@
   const AR = {
     // page
     title: 'ياسر العولقي — معرض الأعمال',
-    description: 'ياسر العولقي (MadeBySoshi) — مطوّر ألعاب مستقل وفنان ثلاثي الأبعاد. محطة الجنوب، وThe House Wants More، وتصميم البيئات على Unreal Engine 5.8.',
+    description: 'ياسر العولقي (MadeBySoshi) — مطوّر ألعاب مستقل وفنان ثلاثي الأبعاد. لعبتي القادمة The House Wants More: رعب تعاوني أونلاين. وأيضًا محطة الجنوب وتصميم البيئات على Unreal Engine 5.8.',
 
     // nav
     nav_janob: 'محطة الجنوب',
@@ -16,14 +16,22 @@
     aria_prev: 'السابق',
     aria_next: 'التالي',
 
-    // hero
+    // hero (The House Wants More key art)
+    hero_badge: 'لعبتي القادمة · قيد التطوير',
+    hero_genre: 'رعب - أونلاين تعاونية',
+    hero_proof: 'من مطوّر <b>محطة الجنوب</b> — أكثر من 3,500 إضافة لقائمة الرغبات على <bdi>Steam</bdi> والعدد في ازدياد.',
+    hero_explore: 'استكشف اللعبة',
+    hero_follow: 'تابع رحلة التطوير',
+    alt_cover: 'The House Wants More — الغلاف الرسمي للعبة',
+
+    // intro
     hero_name: 'ياسر العولقي',
     hero_role: 'مطوّر ألعاب مستقل وفنان ثلاثي الأبعاد',
-    hero_teaser: '&#9654;&ensp;شاهد العرض التشويقي',
+    hero_teaser: '&#9654;&ensp;شاهد العرض التشويقي لمحطة الجنوب',
     hero_work: 'استعرض أعمالي',
 
     // stats
-    stat_wish: 'إضافة إلى قائمة الرغبات على <bdi>Steam</bdi> قبل صدور العرض الرسمي',
+    stat_wish: 'إضافة إلى قائمة الرغبات على <bdi>Steam</bdi>',
     stat_views: 'مشاهدة',
     stat_games: 'لعبتان قيد التطوير',
 
@@ -42,7 +50,8 @@
     model_env_h: 'تصميم البيئة والعمارة',
     model_env_p: 'نمذجة المباني الأساسية في عالم اللعبة — ومنها المحطة والمسجد والمحلات — من الصفر بالكامل على <bdi>Blender</bdi>.',
     model_tex_h: 'الخامات وخرائط <bdi>UV</bdi>',
-    model_tex_p: 'تصميم خامات خاصة من الصفر، وإعادة إكساء المجسّمات لتلائم بيئة سعودية أصيلة وأجواء الرعب، وإعداد خرائط <bdi>UV</bdi> محسّنة.',
+    cmp_note: 'من مجسّم <bdi>Blender</bdi> إلى اللقطة النهائية في <bdi>Unreal</bdi> — اضغط على الصورة للتبديل.',
+    model_tex_p:'تصميم خامات خاصة من الصفر، وإعادة إكساء المجسّمات لتلائم بيئة سعودية أصيلة وأجواء الرعب، وإعداد خرائط <bdi>UV</bdi> محسّنة.',
     chars_h3: 'تصميم الشخصيات وتحريكها',
     chars_c1: 'وجوه عالية الدقة — شخصيات محلية مفصّلة صُمِّمت بأداة <bdi>MetaHuman Creator</bdi>، مع نحت الملامح عبر <bdi>FaceBuilder</bdi> وخامات مرسومة يدويًا.',
     chars_c2: 'شخصيات داخل اللعبة بأقمشة وأزياء محلية أصيلة.',
@@ -52,8 +61,33 @@
     collab_note: 'اتفاقيات مؤكَّدة لأداء صوتي وظهور خاص لأسماء بارزة من مجتمع صنّاع المحتوى.',
 
     // The House Wants More
-    house_tagline: 'رعب بقاء تعاوني عبر الإنترنت',
+    house_tagline: 'رعب تعاوني أونلاين',
     house_badge: 'لعبة قادمة',
+    flash_hint: 'حرّك الضوء السحري',
+    hw_kicker: 'لعبتي القادمة',
+  hm_peek: 'طالع من الشبابيك',
+  hx_hint: 'انزل — أيقظ اللوح',
+  gal_kicker: 'تصميم البيئات',
+  gal_work: 'البوابة المهدّمة',
+  gal_role: 'الدور',
+  gal_role_v: 'مصمم بيئات / مصمم مراحل',
+  gal_medium: 'الأدوات',
+  gal_year: 'السنة',
+  gal_p1: 'البوابة تحت العاصفة',
+  gal_p2: 'البوابة السحرية',
+  gal_p3: 'الفناء',
+  gal_p4: 'البوابة عند الغروب',
+  alt_e0: 'تصميم البيئات — المشهد الرئيسي',
+  jn_kicker: 'قادمة 2027',
+  jn_stat: 'إضافة لقائمة الرغبات في ستيم والعدد في ازدياد',
+  hw_oath1: 'لوحٌ واحد. بيتٌ واحد.',
+  ld_text: 'جارٍ التحميل',
+  hw_keyart: 'الغلاف الرسمي',
+  alt_board: 'اللوح السحري — قلب لعبة The House Wants More',
+  alt_keyart: 'The House Wants More — الغلاف الرسمي',
+    chip_coop: 'تعاوني أونلاين',
+    chip_horror: 'رعب',
+    chip_dev: 'قيد التطوير',
 
     // Environment art
     env_h2: 'تصميم البيئات وتطوير مفاهيمها الفنية',
@@ -67,6 +101,11 @@
     skill_blender: 'نمذجة البيئات والمباني من الصفر، والمجسّمات، وخرائط <bdi>UV</bdi>.',
     skill_mh: '<bdi>MetaHuman Creator</bdi> و<bdi>FaceBuilder</bdi>، والتقاط حركة الجسم والوجه عبر <bdi>Live Link Hub</bdi>.',
     skill_krita: 'تصميم الخامات واللافتات والصور الترويجية الرئيسية والمواد التسويقية.',
+
+    // marquee + contact finale
+    mq_wish: '+3,500 إضافة لقائمة الرغبات',
+    open_collab: 'متاح للتعاون',
+    contact_big: 'تواصل <span>معي.</span>',
 
     // contact / footer
     contact_h2: 'تواصل معي',
@@ -125,6 +164,7 @@
     label.textContent = ar ? 'English' : 'العربية';
     btn.setAttribute('aria-label', ar ? 'Switch to English' : 'التبديل إلى العربية');
     try { localStorage.setItem('lang', lang); } catch (e) { /* private mode: ignore */ }
+    document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));
   }
 
   // ?lang=ar in the link wins, then the visitor's last choice, then their browser language

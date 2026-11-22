@@ -4,27 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yaser Al-Olqi — Portfolio</title>
-  <meta name="description" content="Yaser Al-Olqi (MadeBySoshi) — solo game developer and 3D artist. Janob Station, The House Wants More, and environment art in Unreal Engine 5.8.">
+  <meta name="description" content="Yaser Al-Olqi (MadeBySoshi) — solo game developer and 3D artist. Next game: The House Wants More, an online co-op horror. Also Janob Station and environment art in Unreal Engine 5.8.">
   <meta property="og:title" content="Yaser Al-Olqi — Solo Game Developer & 3D Artist">
-  <meta property="og:description" content="Janob Station · The House Wants More · Environment Art">
-  <meta property="og:image" content="img/janob_teaser_poster.webp">
+  <meta property="og:description" content="My next game: The House Wants More — Online Co-Op Horror. From the creator of Janob Station.">
+  <meta property="og:image" content="https://madebysoshi.com/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://madebysoshi.com/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://madebysoshi.com/img/og.jpg">
+  <link rel="preload" as="image" href="img/house_cover_board.webp">
   <meta name="theme-color" content="#0a0a0b">
   <link rel="icon" href="img/logo_house.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Aref+Ruqaa:wght@400;700&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Cormorant+Garamond:wght@500;600;700&family=Bebas+Neue&family=Lalezar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=4">
+  <script>try{if(sessionStorage.getItem("ld")==="1")document.documentElement.classList.add("ld-skip");sessionStorage.setItem("ld","1")}catch(e){}</script>
 </head>
 <body>
+  <!-- loading: a thin pink bar in the dark -->
+  <div class="loader" aria-hidden="true">
+    <div class="ld-bar"><i></i></div>
+    <p class="ld-text" data-i18n="ld_text">Loading</p>
+  </div>
   <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
 
   <header class="nav" id="top">
     <a class="brand" href="#top">MadeBy<span>Soshi</span></a>
     <div class="nav-right">
       <nav class="nav-links">
-        <a href="#janob" data-i18n="nav_janob">Janob Station</a>
         <a href="#house">The House Wants More</a>
+        <a href="#janob" data-i18n="nav_janob">Janob Station</a>
         <a href="#environment" data-i18n="nav_env">Environment Art</a>
         <a href="#skills" data-i18n="nav_skills">Skills</a>
         <a href="#contact" class="nav-cta" data-i18n="nav_contact">Contact</a>
@@ -34,35 +47,84 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url(img/hero_station.webp)"></div>
+  <!-- HERO: the living cover. Black, then the board's crystal sparks, its light opens the scene and the magic threads rise -->
+  <section class="hero hero2" aria-label="The House Wants More">
+    <div class="hero-art">
+      <img src="img/house_cover_board.webp" alt="The House Wants More — key art" data-i18n-alt="alt_cover" width="1672" height="941" fetchpriority="high">
+      <video class="hero-loop" muted loop playsinline preload="none" aria-hidden="true" data-src="video/house_cover_loop.mp4"></video>
+    </div>
     <div class="hero-shade"></div>
+    <span class="hero-spark" aria-hidden="true"></span>
     <div class="hero-content">
-      <p class="eyebrow">MadeBySoshi</p>
-      <h1 data-i18n="hero_name">Yaser Al-Olqi</h1>
-      <p class="hero-role" data-i18n="hero_role">Solo Game Developer &amp; 3D Artist</p>
+      <span class="hero-badge"><i></i><span data-i18n="hero_badge">My Next Game · In Development</span></span>
+      <h1 class="hero-game"><bdi>The House Wants More</bdi></h1>
+      <p class="hero-genre" data-i18n="hero_genre">Horror · Online Co-Op</p>
       <div class="hero-actions">
-        <button class="btn btn-green" data-video="video/janob_station_teaser.mp4" data-i18n="hero_teaser">&#9654;&ensp;Watch the Teaser</button>
-        <a class="btn btn-ghost" href="#janob" data-i18n="hero_work">View Work</a>
+        <a class="btn btn-blood magnetic" href="#house" data-i18n="hero_explore">Explore the Game</a>
+        <a class="btn btn-ghost magnetic" href="https://www.tiktok.com/@madebysoshi" target="_blank" rel="noopener" data-i18n="hero_follow">Follow the Development</a>
       </div>
     </div>
-    <a class="scroll-hint" href="#stats" aria-label="Scroll down" data-i18n-aria="aria_scroll"></a>
+    <a class="scroll-hint" href="#house" aria-label="Scroll down" data-i18n-aria="aria_scroll"></a>
   </section>
 
-  <!-- STATS -->
-  <section class="stats" id="stats">
-    <div class="stat reveal"><strong data-count="2800">2,800</strong><span>+</span><p data-i18n="stat_wish">Steam wishlists before the official trailer</p></div>
-    <div class="stat reveal"><strong data-count="2" data-suffix="M">2M</strong><span>+</span><p data-i18n="stat_views">Views</p></div>
-    <div class="stat reveal"><strong>2</strong><p data-i18n="stat_games">Games in development</p></div>
-    <div class="stat reveal"><strong>UE&nbsp;5.8</strong><p>Lumen · MetaHuman</p></div>
+  <!-- THE HOUSE WANTS MORE: its own world, a dark storybook full of magic -->
+  <section class="house-world" id="house">
+    <div class="hw-sky" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <header class="hw-head reveal">
+      <p class="hw-kicker"><span class="hw-orn" aria-hidden="true"></span><span data-i18n="hw_kicker">My Next Game</span><span class="hw-orn" aria-hidden="true"></span></p>
+      <h2 class="hw-title hw-title-img"><img src="img/house_title_paint.webp" alt="The House Wants More" width="1543" height="207"></h2>
+      <p class="hw-genre" data-i18n="house_tagline">Online Co-Op Horror</p>
+    </header>
+
+    <!-- the living board: the heart of the game. small, painted, breathing pink magic threads -->
+    <div class="hw-altar reveal" id="hwAltar">
+      <canvas class="hw-threads back" aria-hidden="true"></canvas>
+      <div class="hw-board"><img src="img/house_board_paint.webp" alt="The magic board — the heart of The House Wants More" data-i18n-alt="alt_board" width="1100" height="619"><span class="hw-breath" aria-hidden="true"></span></div>
+      <canvas class="hw-threads front" aria-hidden="true"></canvas>
+      <p class="hw-oath"><em data-i18n="hw_oath2">The house wants more.</em></p>
+    </div>
+
+    <!-- key art, framed like an old painting -->
+    <figure class="hw-keyart reveal">
+      <div class="hw-frame"><img loading="lazy" src="img/house_cover_board.webp" alt="The House Wants More — key art" data-i18n-alt="alt_keyart" width="1672" height="941"></div>
+      <figcaption><span class="hw-orn" aria-hidden="true"></span><span data-i18n="hw_keyart">Key Art</span><span class="hw-orn" aria-hidden="true"></span></figcaption>
+    </figure>
+    <!-- what it is, engraved in one line -->
+    <ul class="hw-tags reveal">
+      <li data-i18n="chip_coop">Online Co-Op</li>
+      <li data-i18n="chip_horror">Horror</li>
+      <li>Unreal Engine 5.8</li>
+      <li data-i18n="chip_dev">In Development</li>
+    </ul>
+
+    <h3 class="hw-sub reveal"><span class="hw-orn" aria-hidden="true"></span><span data-i18n="captures">In-Game Captures</span><span class="hw-orn" aria-hidden="true"></span></h3>
+    <div class="gallery g-house">
+      <figure class="reveal"><img loading="lazy" src="img/house_01_bedroom.webp" alt="The House Wants More — bedroom" data-i18n-alt="alt_h1"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/house_02_dining.webp" alt="The House Wants More — dining room" data-i18n-alt="alt_h2"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/house_03_corridor.webp" alt="The House Wants More — corridor to the library" data-i18n-alt="alt_h3"></figure>
+      <figure class="reveal"><img loading="lazy" src="img/house_04_statue.webp" alt="The House Wants More — the great statue" data-i18n-alt="alt_h4"></figure>
+    </div>
+    <div class="hw-cta reveal">
+      <a class="btn hw-btn magnetic" href="https://www.tiktok.com/@madebysoshi" target="_blank" rel="noopener" data-i18n="hero_follow">Follow the Development</a>
+    </div>
   </section>
 
   <!-- JANOB STATION -->
   <section class="project janob" id="janob">
-    <div class="project-head reveal">
-      <img class="project-logo" src="img/logo_janob.webp" alt="Janob Station — محطة الجنوب" width="1227" height="558">
-      <p class="tagline" data-i18n="janob_tagline">Psychological Horror&ensp;|&ensp;Cultural Realism</p>
+    <div class="road" aria-hidden="true"></div>
+    <!-- night arrival: the station under its neon sign, rain, headlights sweeping past -->
+    <div class="jn-arrive">
+      <div class="jn-bg" style="background-image:url(img/janob_01_station.webp)"></div>
+      <div class="jn-rain" aria-hidden="true"></div>
+      <div class="jn-lights" aria-hidden="true"></div>
+      <div class="jn-shade" aria-hidden="true"></div>
+      <div class="jn-inner reveal">
+        <p class="jn-kicker"><span class="jn-dot" aria-hidden="true"></span><span data-i18n="jn_kicker">Coming 2027</span></p>
+        <img class="project-logo jn-logo" src="img/logo_janob.webp" alt="Janob Station — محطة الجنوب" width="1227" height="558">
+        <p class="tagline" data-i18n="janob_tagline">Psychological Horror&ensp;|&ensp;Cultural Realism</p>
+        <p class="jn-stat"><b>3,500+</b> <span data-i18n="jn_stat">Steam wishlists and growing</span></p>
+      </div>
     </div>
 
     <div class="overview">
@@ -110,11 +172,18 @@
         <h4 data-i18n="model_tex_h">Texturing &amp; UV Workflow</h4>
         <p data-i18n="model_tex_p">Designing custom textures from scratch, re-texturing props to match an authentic Saudi environment and a horror theme, and creating optimized UV layouts.</p>
       </div>
-      <div class="gallery pairs">
-        <figure class="reveal"><img loading="lazy" src="img/janob_model_station_blockout.webp" alt="The station — Blender model" data-i18n-alt="alt_m1"><span class="tag">Blender</span></figure>
-        <figure class="reveal"><img loading="lazy" src="img/janob_model_station_final.webp" alt="The station — final in Unreal" data-i18n-alt="alt_m2"><span class="tag tag-green">Unreal</span></figure>
-        <figure class="reveal"><img loading="lazy" src="img/janob_model_building_blockout.webp" alt="Apartment building — Blender model" data-i18n-alt="alt_m3"><span class="tag">Blender</span></figure>
-        <figure class="reveal"><img loading="lazy" src="img/janob_model_building_final.webp" alt="Apartment building — final in Unreal" data-i18n-alt="alt_m4"><span class="tag tag-green">Unreal</span></figure>
+      <div class="compares">
+        <figure class="cmp reveal">
+          <img loading="lazy" class="cmp-a" src="img/janob_model_station_blockout.webp" alt="The station — Blender model" data-i18n-alt="alt_m1">
+          <img loading="lazy" class="cmp-b" src="img/janob_model_station_final.webp" alt="The station — final in Unreal" data-i18n-alt="alt_m2">
+          <div class="cmp-switch" role="group" aria-label="Blender / Unreal"><button type="button" data-k="a" aria-pressed="true">Blender</button><button type="button" data-k="b" aria-pressed="false">Unreal</button></div>
+        </figure>
+        <figure class="cmp reveal">
+          <img loading="lazy" class="cmp-a" src="img/janob_model_building_blockout.webp" alt="Apartment building — Blender model" data-i18n-alt="alt_m3">
+          <img loading="lazy" class="cmp-b" src="img/janob_model_building_final.webp" alt="Apartment building — final in Unreal" data-i18n-alt="alt_m4">
+          <div class="cmp-switch" role="group" aria-label="Blender / Unreal"><button type="button" data-k="a" aria-pressed="true">Blender</button><button type="button" data-k="b" aria-pressed="false">Unreal</button></div>
+        </figure>
+        <p class="cmp-note" data-i18n="cmp_note">From the Blender model to the final shot in Unreal — tap a frame to switch.</p>
       </div>
     </div>
 
@@ -134,43 +203,44 @@
     <p class="sub-note center reveal" data-i18n="collab_note">Secured upcoming voice-acting and special cameos from prominent community figures.</p>
   </section>
 
-  <!-- THE HOUSE WANTS MORE -->
-  <section class="project house" id="house">
-    <div class="house-hero" style="background-image:url(img/house_bg.webp)">
-      <div class="house-hero-inner reveal">
-        <img class="house-logo" src="img/logo_house.webp" alt="The House Wants More" width="999" height="1004">
-        <p class="tagline cream" data-i18n="house_tagline">Online Co-op, Survival Horror</p>
-        <span class="badge" data-i18n="house_badge">Upcoming Game</span>
+  <!-- ENVIRONMENT ART: cinematic. A letterboxed opener, then the shots as an expanding accordion -->
+  <section class="ec" id="environment">
+    <div class="ec-open">
+      <div class="ec-bg" style="background-image:url(img/env_hero.webp)"></div>
+      <div class="ec-heat" aria-hidden="true"></div>
+      <div class="ec-bars" aria-hidden="true"><i></i><i></i></div>
+      <div class="ec-inner reveal">
+        <h2 class="ec-title" data-i18n="env_h2">Environment Art Concept &amp; Design</h2>
+        <p class="ec-meta"><span data-i18n="gal_role_v">Environment Artist / Level Designer</span><i aria-hidden="true">✦</i><span>Unreal Engine 5.8 · Blender</span></p>
       </div>
     </div>
-    <h3 class="sub reveal" data-i18n="captures">In-Game Captures</h3>
-    <div class="gallery g-house">
-      <figure class="reveal"><img loading="lazy" src="img/house_01_bedroom.webp" alt="The House Wants More — bedroom" data-i18n-alt="alt_h1"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/house_02_dining.webp" alt="The House Wants More — dining room" data-i18n-alt="alt_h2"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/house_03_corridor.webp" alt="The House Wants More — corridor to the library" data-i18n-alt="alt_h3"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/house_04_statue.webp" alt="The House Wants More — the great statue" data-i18n-alt="alt_h4"></figure>
+    <div class="gallery g-env ec-acc reveal">
+        <figure class="ec-slice open" tabindex="0"><img loading="lazy" src="img/env_01.webp" alt="Environment art — ruined gate under a storm" data-i18n-alt="alt_e1"><figcaption><b>I</b><span data-i18n="gal_p1">Gate under a storm</span></figcaption></figure>
+        <figure class="ec-slice" tabindex="0"><img loading="lazy" src="img/env_02.webp" alt="Environment art — the portal" data-i18n-alt="alt_e2"><figcaption><b>II</b><span data-i18n="gal_p2">The portal</span></figcaption></figure>
+        <figure class="ec-slice" tabindex="0"><img loading="lazy" src="img/env_03.webp" alt="Environment art — courtyard" data-i18n-alt="alt_e3"><figcaption><b>III</b><span data-i18n="gal_p3">Courtyard</span></figcaption></figure>
+        <figure class="ec-slice" tabindex="0"><img loading="lazy" src="img/env_04.webp" alt="Environment art — the gate at dusk" data-i18n-alt="alt_e4"><figcaption><b>IV</b><span data-i18n="gal_p4">The gate at dusk</span></figcaption></figure>
     </div>
   </section>
 
-  <!-- ENVIRONMENT ART -->
-  <section class="project env" id="environment">
-    <div class="env-hero" style="background-image:url(img/env_hero.webp)">
-      <div class="env-hero-inner reveal">
-        <h2 data-i18n="env_h2">Environment Art Concept &amp; Design</h2>
-        <div class="meta">
-          <span data-i18n="env_role"><em>Role</em> Environment Artist / Level Designer</span>
-          <span data-i18n="env_tools"><em>Tools</em> Unreal Engine 5.8 / Blender</span>
-        </div>
-      </div>
-    </div>
-    <h3 class="sub reveal" data-i18n="env_captures">In-Engine Captures</h3>
-    <div class="gallery g-env">
-      <figure class="reveal"><img loading="lazy" src="img/env_01.webp" alt="Environment art — ruined gate under a storm" data-i18n-alt="alt_e1"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/env_02.webp" alt="Environment art — the portal" data-i18n-alt="alt_e2"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/env_03.webp" alt="Environment art — courtyard" data-i18n-alt="alt_e3"></figure>
-      <figure class="reveal"><img loading="lazy" src="img/env_04.webp" alt="Environment art — the gate at dusk" data-i18n-alt="alt_e4"></figure>
+  <!-- INTRO -->
+  <section class="intro" id="about">
+    <p class="eyebrow reveal">MadeBySoshi</p>
+    <h1 class="neon reveal" data-i18n="hero_name">Yaser Al-Olqi</h1>
+    <p class="hero-role reveal" data-i18n="hero_role">Solo Game Developer &amp; 3D Artist</p>
+    <div class="hero-actions reveal">
+      <a class="btn btn-green magnetic" href="#contact" data-i18n="nav_contact">Contact</a>
+      <a class="btn btn-ghost magnetic" href="#house" data-i18n="hero_work">View Work</a>
     </div>
   </section>
+
+  <!-- STATS -->
+  <section class="stats" id="stats">
+    <div class="stat reveal"><strong data-count="3500">3,500</strong><span>+</span><p data-i18n="stat_wish">Steam wishlists</p></div>
+    <div class="stat reveal"><strong data-count="2" data-suffix="M">2M</strong><span>+</span><p data-i18n="stat_views">Views</p></div>
+    <div class="stat reveal"><strong>2</strong><p data-i18n="stat_games">Games in development</p></div>
+    <div class="stat reveal"><strong>UE&nbsp;5.8</strong><p>Lumen · MetaHuman</p></div>
+  </section>
+
 
   <!-- SKILLS -->
   <section class="skills" id="skills">
@@ -185,9 +255,12 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <h2 class="reveal" data-i18n="contact_h2">Contact Me</h2>
+    <p class="contact-ghost" aria-hidden="true">SOSHI</p>
+    <span class="open-badge reveal"><i></i><span data-i18n="open_collab">Open to collaborations</span></span>
+    <h2 class="contact-big reveal" data-i18n="contact_big">Get in <span>touch.</span></h2>
+    <p class="contact-sub reveal" data-i18n="contact_h2">Contact Me</p>
     <div class="divider reveal"><i></i></div>
-    <a class="mail reveal" href="mailto:Madebysoshi@gmail.com">Madebysoshi@gmail.com</a>
+    <a class="mail magnetic reveal" href="mailto:Madebysoshi@gmail.com">Madebysoshi@gmail.com</a>
     <div class="socials reveal">
       <a href="https://www.tiktok.com/@madebysoshi" target="_blank" rel="noopener">TikTok</a>
       <a href="https://www.instagram.com/madebysoshi" target="_blank" rel="noopener">Instagram</a>
@@ -207,7 +280,7 @@
     <button class="modal-next" aria-label="Next" data-i18n-aria="aria_next">&#8250;</button>
   </div>
 
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/i18n.js?v=4"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>
