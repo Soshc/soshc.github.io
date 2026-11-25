@@ -589,6 +589,15 @@ const magicThreads = (canvas, anchor, opts = {}) => {
   setTimeout(leave, 6000);
 })();
 
+// 11-25 "Follow the Development" menus: close on an outside click, on Escape, or after picking an account
+(() => {
+  const menus = [...document.querySelectorAll('details.follow')];
+  if (!menus.length) return;
+  document.addEventListener('click', e => menus.forEach(d => { if (d.open && !d.contains(e.target)) d.open = false; }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') menus.forEach(d => { d.open = false; }); });
+  menus.forEach(d => d.querySelectorAll('.follow-menu a').forEach(a => a.addEventListener('click', () => { d.open = false; })));
+})();
+
 
 // 11-16 environment accordion: hover (mouse) or tap / focus opens a slice; clicking the open one opens the lightbox
 (() => {
