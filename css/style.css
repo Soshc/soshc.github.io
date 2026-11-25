@@ -764,6 +764,8 @@ html[dir="rtl"] .hw-keyart figcaption { letter-spacing: 0; }
 .hero-logo { margin-top: 14px; line-height: 0; }
 .hero-logo img { display: block; width: clamp(190px, 21vw, 330px); height: auto; filter: drop-shadow(0 6px 18px rgba(0,0,0,.75)) drop-shadow(0 0 22px rgba(255,61,154,.14)); }
 [dir="rtl"] .hero-logo img { margin-left: auto; }
+/* pictures: no drag-out, no selection, no iOS long-press save menu */
+img, figure, video { -webkit-user-drag: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
 /* "Follow the Development" opens a small menu with all his accounts */
 .follow { position: relative; display: inline-block; }
 .follow > summary { list-style: none; cursor: pointer; user-select: none; }

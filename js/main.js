@@ -589,6 +589,14 @@ const magicThreads = (canvas, anchor, opts = {}) => {
   setTimeout(leave, 6000);
 })();
 
+// 11-25 make saving the pictures harder: no right-click menu, no drag-out, no long-press menu on images / galleries
+(() => {
+  const guarded = t => t && t.closest && t.closest('img, figure, video, .gallery, .hero-art, .ec-bg, .hw-frame, .hw-board');
+  document.addEventListener('contextmenu', e => { if (guarded(e.target)) e.preventDefault(); });
+  document.addEventListener('dragstart', e => { if (guarded(e.target)) e.preventDefault(); });
+  document.querySelectorAll('img').forEach(i => i.setAttribute('draggable', 'false'));
+})();
+
 // 11-25 "Follow the Development" menus: close on an outside click, on Escape, or after picking an account
 (() => {
   const menus = [...document.querySelectorAll('details.follow')];
