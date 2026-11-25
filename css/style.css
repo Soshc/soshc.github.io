@@ -761,6 +761,10 @@ html[dir="rtl"] .hw-keyart figcaption { letter-spacing: 0; }
 .hero2 .hero-content { left: max(var(--gutter), 3.6vw); bottom: auto; top: 50%; translate: 0 -38%; max-width: min(400px, 26vw); }
 .hero2 .hero-genre { margin-top: 10px; font-size: clamp(16px, 1.5vw, 21px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(239,228,204,.82); }
 .hero-game { margin-top: 18px; font: 800 clamp(30px, 3.6vw, 52px)/1.05 "Montserrat", sans-serif; letter-spacing: .01em; color: var(--cream); text-shadow: 0 2px 22px rgba(0,0,0,.85), 0 0 28px rgba(255,61,154,.18); }
+.hero-logo { margin-top: 14px; line-height: 0; }
+.hero-logo img { display: block; width: clamp(190px, 21vw, 330px); height: auto; filter: drop-shadow(0 6px 18px rgba(0,0,0,.75)) drop-shadow(0 0 22px rgba(255,61,154,.14)); }
+[dir="rtl"] .hero-logo img { margin-left: auto; }
+.footer-rights { display: block; margin-top: 6px; font-size: 11px; letter-spacing: .04em; color: #4a4846; }
 [dir="rtl"] .hero2 .hero-genre { text-transform: none; letter-spacing: 0; font-family: "IBM Plex Sans Arabic", sans-serif; }
 @media (max-width: 760px) {
   .hero2 .hero-art { left: 0; -webkit-mask-image: none; mask-image: none; }

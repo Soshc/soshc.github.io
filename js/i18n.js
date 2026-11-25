@@ -111,6 +111,7 @@
     contact_h2: 'تواصل معي',
     support: '&#9829;&ensp;ادعم أعمالي',
     footer: '© 2026 ياسر العولقي · MadeBySoshi',
+    footer_rights: 'جميع الحقوق محفوظة لـ <bdi>Madebysoshi</bdi>.',
 
     // image descriptions (screen readers)
     alt_j1: 'محطة الجنوب — المحطة ليلًا تحت لافتة النيون',
